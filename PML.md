@@ -165,7 +165,9 @@ print(plot(varImp(model, scale = FALSE)))
 
 
 ## 12. Run the predictions.
-  
+
+This will allow us to cross validate our model and determine the out of sample error.  We expect an out of sample error to be less than %5.
+
 ```{r}
 prediction_Training <- predict(model, training)
 
@@ -175,7 +177,9 @@ confusionMatrix(prediction_Training, training$classe)
 We have a 93.4% fit which is quite good.
 
 
-## 13. Check performance results.
+## 13. Check Prediction Results.
+
+We will use the following data to cross validate our model and determine the out of sample error.  We expect an out of sample error to be less than %5.
 
 ```{r}
 predictint_Testing <- predict(model, testing)
@@ -183,7 +187,7 @@ predictint_Testing <- predict(model, testing)
 confusionMatrix(predictint_Testing, testing$classe)
 ```
 
-We have a 91.99% fit for our testing data which is very close to our training data.
+We have a 91.99% fit for our testing data which is very close to our training data at 93.4%.  A variance of 1.41% which is well within our expected 5% error estimation.
 
 
 ## 14. Conclusion.
