@@ -157,7 +157,7 @@ print(model)
 
 # 11. Check the Effects of the Variables.
   
-# We do a quick check of the effects of the variables.  We can easily and quickly see which of the experiment variables are important and those which are not.
+We do a quick check of the effects of the variables.  We can easily and quickly see which of the experiment variables are important and those which are not.
 
 ```{r}
 print(plot(varImp(model, scale = FALSE)))
