@@ -166,7 +166,7 @@ print(plot(varImp(model, scale = FALSE)))
 
 ## 12. Run the predictions.
 
-This will allow us to cross validate our model and determine the out of sample error.  We expect an out of sample error to be less than %5.
+This will allow us to cross validate our model and determine the out of sample error.  We expect an out of sample error to be less than 5%.
 
 ```{r}
 prediction_Training <- predict(model, training)
